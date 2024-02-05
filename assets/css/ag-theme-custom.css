@@ -1,0 +1,11 @@
+.ag-theme-balham {
+    font-size: 12px !important;
+}
+
+.ag-body-horizontal-scroll-viewport::-webkit-scrollbar {
+    width: 8px;
+}
+
+.ag-body-horizontal-scroll-viewport::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+}

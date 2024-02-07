@@ -176,6 +176,7 @@ class Uploader extends BaseController
                             "updated_at" => date('Y-m-d H:i:s'),
                             "month" => $formating_month,
                             "week_num" => $getWeekNum->weekNumberInMonth,
+                            "tgl_bootcamp" => $date,
                         ];
                         $db_table = $schema . ".confirmation_detail";
                     } else {
@@ -211,6 +212,7 @@ class Uploader extends BaseController
                             "updated_at" => date('Y-m-d H:i:s'),
                             "month" => $formating_month,
                             "week_num" => $getWeekNum->weekNumberInMonth,
+                            "tgl_bootcamp" => $date,
                         ];
                         $db_table = $schema . ".data_pending";
                     }
@@ -260,6 +262,7 @@ class Uploader extends BaseController
                                 "updated_at" => date('Y-m-d H:i:s'),
                                 "month" => $formating_month,
                                 "week_num" => $getWeekNum->weekNumberInMonth,
+                                "tgl_bootcamp" => $date,
                             ];
                             $db_table = $schema . ".step_one_to_four";
                         } elseif ($request->sub_category_name === 'STEP 5') {
@@ -292,6 +295,7 @@ class Uploader extends BaseController
                                 "updated_at" => date('Y-m-d H:i:s'),
                                 "month" => $formating_month,
                                 "week_num" => $getWeekNum->weekNumberInMonth,
+                                "tgl_bootcamp" => $date,
                             ];
                             $db_table = $schema . ".step_five";
                         } elseif ($request->sub_category_name === 'LIST KONFIRMASI') {
@@ -346,6 +350,7 @@ class Uploader extends BaseController
                                 "updated_at" => date('Y-m-d H:i:s'),
                                 "month" => $formating_month,
                                 "week_num" => $getWeekNum->weekNumberInMonth,
+                                "tgl_bootcamp" => $date,
                             ];
                             $db_table = $schema . ".confirmation_list";
                         } elseif ($request->sub_category_name === 'UNIDENTIFIED KB') {
@@ -370,6 +375,7 @@ class Uploader extends BaseController
                                 "updated_at" => date('Y-m-d H:i:s'),
                                 "month" => $formating_month,
                                 "week_num" => $getWeekNum->weekNumberInMonth,
+                                "tgl_bootcamp" => $date,
                             ];
                             $db_table = $schema . ".unidentified_kb";
                         } elseif ($request->sub_category_name === 'CR VARIABLE') {
@@ -392,6 +398,7 @@ class Uploader extends BaseController
                                 "updated_at" => date('Y-m-d H:i:s'),
                                 "month" => $formating_month,
                                 "week_num" => $getWeekNum->weekNumberInMonth,
+                                "tgl_bootcamp" => $date,
                             ];
                             $db_table = $schema . ".cr_variable";
                         } else {
@@ -415,6 +422,7 @@ class Uploader extends BaseController
                                 "updated_at" => date('Y-m-d H:i:s'),
                                 "month" => $formating_month,
                                 "week_num" => $getWeekNum->weekNumberInMonth,
+                                "tgl_bootcamp" => $date,
                             ];
                             $db_table = $schema . ".confirm_split_bill";
                         }
@@ -432,6 +440,7 @@ class Uploader extends BaseController
                             "updated_at" => date('Y-m-d H:i:s'),
                             "month" => $formating_month,
                             "week_num" => $getWeekNum->weekNumberInMonth,
+                            "tgl_bootcamp" => $date,
                         ];
                         $db_table = $schema . ".witel_datas_psak";
                     }
@@ -484,6 +493,7 @@ class Uploader extends BaseController
                             "updated_at" => date('Y-m-d H:i:s'),
                             "month" => $formating_month,
                             "week_num" => $getWeekNum->weekNumberInMonth,
+                            "tgl_bootcamp" => $date,
                         ];
                         $db_table = $schema . ".lessee";
                     } else {
@@ -537,6 +547,7 @@ class Uploader extends BaseController
                             "updated_at" => date('Y-m-d H:i:s'),
                             "month" => $formating_month,
                             "week_num" => $getWeekNum->weekNumberInMonth,
+                            "tgl_bootcamp" => $date,
                         ];
                         $db_table = $schema . ".lessor";
                     }

@@ -5,6 +5,7 @@
 
 // print('<pre>' . print_r($user->nik, true) . '</pre>');
 // exit;
+$paths = $_SERVER['PATH_INFO'];
 ?>
 
 <nav class="sidebar">
@@ -21,6 +22,66 @@
   </div>
   <div class="sidebar-body">
     <ul class="nav">
+      <li class="nav-item nav-category <?= strpos($paths, 'frontend/dashboard') ? 'active' : '' ?>">
+        <a href="#dashboard" class="nav-link mb-3 pb-3" role="button" data-toggle="collapse" aria-expanded="true" aria-controls="dashboard">
+          <span class="link-title ml-0">Dashboard</span>
+          <i class="link-arrow" data-feather="chevron-down"></i>
+        </a>
+      </li>
+      <div class="<?= strpos($paths, 'frontend/dashboard') ? 'show active' : 'collapse' ?>" id="dashboard">
+        <li class="nav-item <?= strpos($paths, 'index') ? 'active' : '' ?>" onclick="setActive('Infographic', 'dashboard')">
+          <?php if (strpos($paths, 'frontend')) : ?>
+            <router-link class="nav-link" :to="{ name: 'dashboard' }">
+              <i class="link-icon" data-feather="box"></i>
+              <span class="link-title">Infographic</span>
+            </router-link>
+          <?php else : ?>
+            <a href="<?= base_url(); ?>index.php/frontend/dashboard/index" class="nav-link">
+              <i class="link-icon" data-feather="box"></i>
+              <span class="link-title">Infographic</span>
+            </a>
+          <?php endif; ?>
+        </li>
+        <li class="nav-item <?= strpos($paths, 'trend/financial') ? 'active' : '' ?>" onclick="setActive('Trend Financial', 'dashboard')">
+          <?php if (strpos($paths, 'frontend')) : ?>
+            <router-link class="nav-link" :to="{ name: 'trend-financial' }">
+              <i class="link-icon" data-feather="box"></i>
+              <span class="link-title">Trend Financial</span>
+            </router-link>
+          <?php else : ?>
+            <a href="<?= base_url(); ?>index.php/frontend/dashboard/trend/financial" class="nav-link">
+              <i class="link-icon" data-feather="box"></i>
+              <span class="link-title">Trend Financial</span>
+            </a>
+          <?php endif; ?>
+        </li>
+        <li class="nav-item <?= strpos($paths, 'trend/operational') ? 'active' : '' ?>" onclick="setActive('Trend Operational', 'dashboard')">
+          <?php if (strpos($paths, 'frontend')) : ?>
+            <router-link class="nav-link" :to="{ name: 'trend-operational' }">
+              <i class="link-icon" data-feather="box"></i>
+              <span class="link-title">Trend Operational</span>
+            </router-link>
+          <?php else : ?>
+            <a href="<?= base_url(); ?>index.php/frontend/dashboard/trend/operational" class="nav-link">
+              <i class="link-icon" data-feather="box"></i>
+              <span class="link-title">Trend Operational</span>
+            </a>
+          <?php endif; ?>
+        </li>
+        <li class="nav-item <?= strpos($paths, 'analytic') ? 'active' : '' ?>" onclick="setActive('Analytic', 'dashboard')">
+          <?php if (strpos($paths, 'frontend')) : ?>
+            <router-link class="nav-link" :to="{ name: 'analytic' }">
+              <i class="link-icon" data-feather="box"></i>
+              <span class="link-title">Analytic</span>
+            </router-link>
+          <?php else : ?>
+            <a href="<?= base_url(); ?>index.php/frontend/dashboard/analytic" class="nav-link">
+              <i class="link-icon" data-feather="box"></i>
+              <span class="link-title">Analytic</span>
+            </a>
+          <?php endif; ?>
+        </li>
+      </div>
 
       <!-- Start Legal -->
       <li class="nav-item nav-category">
@@ -82,13 +143,16 @@
         </a>
       </li>
       <!-- Start KHS -->
-      <li class="nav-item <?= $sidebar['category_active'] == 'KHS' ? 'active' : '' ?>">
-        <a class="nav-link" href="<?= base_url(); ?>index.php/logistic/khs/">
-          <i class="link-icon" data-feather="circle"></i>
-          <span class="link-title">KHS</span>
-        </a>
-      </li>
+      <div class="<?= $sidebar['parent_active'] == 'Logistic' ? 'show active' : 'collapse' ?>" id="logistic">
+        <li class="nav-item <?= $sidebar['category_active'] == 'KHS' ? 'active' : '' ?>">
+          <a class="nav-link" href="<?= base_url(); ?>index.php/logistic/khs/">
+            <i class="link-icon" data-feather="circle"></i>
+            <span class="link-title">KHS</span>
+          </a>
+        </li>
+      </div>
       <!-- End KHS -->
+      <!-- End Logistic -->
 
       <!-- Start Program 9 Bintang -->
       <li class="nav-item nav-category">

@@ -1,0 +1,122 @@
+@import "vue-select/dist/vue-select.css";
+
+.v3dp__datepicker {
+  --vdp-bg-color: #ffffff;
+  --vdp-text-color: #000000;
+  --vdp-box-shadow: 0 4px 10px 0 rgba(128, 144, 160, 0.1),
+    0 0 1px 0 rgba(128, 144, 160, 0.81);
+  --vdp-border-radius: 3px;
+  --vdp-heading-size: 2.5em;
+  --vdp-heading-weight: bold;
+  --vdp-disabled-color: #d5d9e0;
+  --vdp-hover-color: #ffffff;
+  --vdp-hover-bg-color: #387aff;
+  --vdp-selected-color: #ffffff;
+  --vdp-selected-bg-color: #4867fe;
+  --vdp-elem-font-size: 0.8em;
+  --vdp-elem-border-radius: 3px;
+  --vdp-divider-color: #ffffff;
+}
+
+button.v3dp__heading__center:hover,
+.v3dp__heading__button:not(:disabled):hover {
+  background: rgb(118, 29, 253) !important;
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(118, 29, 253, 1) 46%,
+    rgba(69, 141, 252, 1) 100%
+  ) !important;
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(118, 29, 253, 1) 46%,
+    rgba(69, 141, 252, 1) 100%
+  ) !important;
+  background: linear-gradient(
+    90deg,
+    rgba(118, 29, 253, 1) 46%,
+    rgba(69, 141, 252, 1) 100%
+  ) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#761dfd",endColorstr="#458dfc",GradientType=1) !important;
+  border-radius: 5px !important;
+  color: #fff !important;
+}
+
+.v3dp__popout {
+  padding-left: 8px !important;
+  padding-right: 8px !important;
+}
+
+.v3dp__divider {
+  display: none !important;
+}
+
+.v3dp__elements {
+  margin-top: 10px !important;
+}
+
+.v3dp__elements button.selected span {
+  color: #fff !important;
+  background-color: #4867fe;
+}
+
+.layered-card {
+  position: relative;
+
+  /* Demo */
+  height: 100%;
+  width: 100%;
+}
+
+.layered-card::before {
+  background: #ffffff;
+  content: "";
+
+  /* Position */
+  top: 0;
+  left: 0;
+  position: absolute;
+
+  /* Size */
+  height: 100%;
+  width: 100%;
+
+  /* Display under the main content */
+  z-index: 0;
+}
+
+.layered-card__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Position */
+  left: 0;
+  position: absolute;
+  top: 0;
+
+  /* Size */
+  height: 100%;
+  width: 100%;
+
+  z-index: 1;
+
+  background: #fff;
+}
+
+/*
+  Enter and leave animations can use different
+  durations and timing functions.
+*/
+.slide-fade-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateX(20px);
+  opacity: 0;
+}

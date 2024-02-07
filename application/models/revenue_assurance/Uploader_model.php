@@ -24,9 +24,9 @@ class Uploader_model extends CI_Model
         }
     }
 
-    private function check_Datas($db_table, $month, $week_num)
+    private function check_Datas($db_table, $month, $bootcamp_date)
     {
-        $query = "select * from $db_table where month = '$month' and week_num = '$week_num'";
+        $query = "select * from $db_table where month = '$month' and to_char(tgl_bootcamp, 'yyyy-mm-dd') = '$bootcamp_date'";
 
         return $this->postgres->query($query)->row();
     }

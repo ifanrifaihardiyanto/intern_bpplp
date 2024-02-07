@@ -1,0 +1,32 @@
+{
+  "name": "frontend",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "watch": "vite build --watch",
+    "preview": "vite preview --port 4173",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
+  },
+  "dependencies": {
+    "apexcharts": "^3.35.5",
+    "axios": "^0.27.2",
+    "moment": "^2.29.4",
+    "pinia": "^2.0.21",
+    "vgauge": "^1.2.12-rc3",
+    "vue": "^3.2.38",
+    "vue-router": "^4.1.5",
+    "vue-select": "^4.0.0-beta.5",
+    "vue3-apexcharts": "^1.4.1",
+    "vue3-datepicker": "^0.3.4"
+  },
+  "devDependencies": {
+    "@rushstack/eslint-patch": "^1.1.4",
+    "@vitejs/plugin-vue": "^3.0.3",
+    "@vue/eslint-config-prettier": "^7.0.0",
+    "eslint": "^8.22.0",
+    "eslint-plugin-vue": "^9.3.0",
+    "prettier": "^2.7.1",
+    "vite": "^3.0.9"
+  }
+}

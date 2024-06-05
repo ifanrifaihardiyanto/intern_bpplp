@@ -9,12 +9,13 @@ class Dashboard extends BaseController
      */
     public function index()
     {
-        redirect('index.php/frontend/dashboard/index', 'refresh');
-        // redirect('index.php/dashboard');
-        // $this->load->view('/dashboard');
+        redirect('index.php/dashboard/front_page');
+    }
 
-        // $this->metadata->pageView = '/dashboard';
+    public function front_page()
+    {
+        $this->metadata->pageView = '/dashboard';
 
-        // $this->loadViews("includes/main", NULL, $this->global, NULL);
+        $this->loadViews("includes/main", NULL, $this->global, NULL);
     }
 }

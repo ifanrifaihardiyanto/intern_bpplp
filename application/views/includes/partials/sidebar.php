@@ -1,10 +1,4 @@
 <?php
-// $user = (object) $this->session->userdata('user');
-// $nik_survei = $this->session->userdata('nik_survei');
-// $user_survei_sl = $this->session->userdata('user_survei_sl');
-
-// print('<pre>' . print_r($user->nik, true) . '</pre>');
-// exit;
 $paths = $_SERVER['PATH_INFO'];
 ?>
 
@@ -148,6 +142,12 @@ $paths = $_SERVER['PATH_INFO'];
           <a class="nav-link" href="<?= base_url(); ?>index.php/logistic/khs/">
             <i class="link-icon" data-feather="circle"></i>
             <span class="link-title">KHS</span>
+          </a>
+        </li>
+        <li class="nav-item <?= $sidebar['category_active'] == 'Report PR' ? 'active' : '' ?>">
+          <a class="nav-link" href="<?= base_url(); ?>index.php/logistic/report_pr/">
+            <i class="link-icon" data-feather="circle"></i>
+            <span class="link-title">Report PR</span>
           </a>
         </li>
       </div>
